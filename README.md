@@ -1,2 +1,58 @@
-# cyber-awareness-test
-cyber-awareness-test
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تم اختراقك!</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: monospace;
+      text-align: center;
+      padding: 50px;
+    }
+    .hidden {
+      display: none;
+    }
+    .message-box {
+      background-color: #111;
+      color: white;
+      border: 2px solid red;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 50px;
+    }
+    .btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚠️ تم اختراق جهازك!</h1>
+  <p>جاري استخراج البيانات...</p>
+  <p id="loading">█ █ █ █ █ █ █ █ █ █</p>
+
+  <div id="realMessage" class="message-box hidden">
+    <h2>🚨 لا تقلق، هذا مجرد اختبار توعوي!</h2>
+    <p>لقد قمت بفتح رابط غير موثوق، وهذه هي الطريقة التي يبدأ بها الكثير من الهجمات الإلكترونية.</p>
+    <p>انتبه دائمًا قبل الضغط على أي رابط.</p>
+    <p><strong>خلك واعي، وخلّك بأمان 💻🔒</strong></p>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.querySelector("h1").innerText = "📢 مفاجأة!";
+      document.querySelector("p").innerText = "أنت بأمان، هذا مجرد توعية.";
+      document.getElementById("loading").classList.add("hidden");
+      document.getElementById("realMessage").classList.remove("hidden");
+    }, 4000);
+  </script>
+</body>
+</html>
